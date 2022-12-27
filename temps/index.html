@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERGED- Merge your PDFS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        *{
+    font-family: 'Roboto', sans-serif;
+
+        }
+        .form-input{
+            background-color: rgb(128, 128, 158);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease all;
+            position: relative;
+            left: 100px;
+            border: none;
+        }
+        .form-input:hover{
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgb(212, 212, 212);
+            margin-bottom: 10em;
+        }
+        .nav-container{
+            display: flex;
+        }
+        .nav-logo{
+            color: rgb(128, 128, 158);
+            cursor: pointer;
+
+        }
+        .nav-item{
+            list-style: none;
+            margin-right: 1em;
+            transition: 0.3s ease all;
+        }
+        .nav-item:hover{
+            transform: scale(1.1)
+        }
+        .nav-item a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+
+            
+        }
+        .form-button{
+            background-color: rgb(128, 128, 158);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease all;
+            border: none;
+        }
+        .form-button:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="nav-logo">MERGED</h1>
+        <ul class="nav-container">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+        </ul>
+    </nav>
+<h1 style="text-align: center;">MERGED - Merge your PDFS into one</h1>
+<form method="post" class="container" action="/merge" enctype="multipart/form-data">
+    <div >
+        <label class="form-input" for="form-input">Select Files</label>
+        <input  type="file" name="pdfs"  id="form-input" multiple accept=".pdf">
+        <input type="submit" style="display: none;" id="button">
+        <label class="form-button"    for="button">Submit</label>
+    </div>
+</form>
+</body>
+</html>
